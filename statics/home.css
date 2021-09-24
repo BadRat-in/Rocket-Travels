@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100&display=swap');
+
+/* font-family: 'IBM Plex Sans Arabic', sans-serif; */
+
+
+body{
+  overflow-x: hidden;
+    background-image: url("./bg3.jpg");
+    background-size: fill;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.nav-bar ul{
+    width: 100%;
+    display: inline;
+}
+
+.nav-bar ul a{
+    text-decoration: none;
+    color: rgb(116, 5, 116);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-property: color;
+}
+
+.nav-bar ul a img{
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+    
+}
+
+.nav-bar ul a:hover{
+    color: rgb(16, 58, 136);
+}
+
+.nav-bar ul a li{
+    float: right;
+    font-size: 20px;
+    margin-right: 35px;
+    display: inline;
+    box-shadow: 15px 8px 15px 8px;
+    border: solid rgb(224, 223, 129) 2px;
+    border-radius: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-bar ul a .btn{
+    margin-top: 8px;
+}
+.nav-bar ul a .stitle{
+    margin-left: 35px;
+    float: left;
+    font-family: "Allison", 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 900;
+    border: none;
+}
+
+
+.search-container{
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    margin-top: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 50%;
+    background-color: rgba(150, 45, 24, 0.26);
+    box-shadow: 5px 4px 5px 4px rgba(19, 18, 18, 0.459);
+}
+
+
+/* @media (max-width: 1040){
+    .search-container{
+        width: ;
+    }
+} */
+
+
+.search-container .search-box{
+    padding: 25px;
+    border: 3px;
+}
+
+.search-container .search-box .search-input{
+    margin-top: 8px;
+    height: 25px;
+    background-color: wheat;
+    color: rgb(95, 95, 95);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-indent: 6px;
+}
+
+.search-container .search-box .search-input:hover{
+    font-weight: 600;
+    width: 219px;
+}
+
+.search-container .search-box .search-btn{
+    background: linear-gradient(30deg, rgba(247, 247, 247, 0.3) 50%, rgba(170, 111, 226, 0.4) 100%);
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: 2px 3px 2px rgba(25, 55, 25, 0.6);
+    color: white;
+    transition-property: color, width, height, font-size, box-shadow, padding;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 20px;
+    border-radius: 6px;
+    padding: 5px;
+  }
+  
+  .search-container .search-box .search-btn:hover{
+    color: aliceblue;
+    box-shadow: 8px 10px 8px rgba(25, 55, 25, 0.4);
+    width: 180px;
+    height: 35px;
+    font-size: 22px;
+    padding: 0;
+  }
+
+
+  .search-container .search-box i{
+      color: rgb(71, 63, 63);
+  }
+
+
+  .form {
+    backdrop-filter: blur(5px);
+    margin-top: 2%;
+    background: linear-gradient(30deg, rgba(201, 229, 235, 0.3) 0%, rgba(24, 29, 80, 0.4) 100%);
+    width: 35%;
+    padding: 2% 5% 6% 5%;
+    border-radius: 10px;
+  }
+  
+  .form table th, input, label{
+    color: white;
+    
+  }
+  
+  .form table tr td{
+    padding: 5px;
+    font-size: 20px;
+  }
+  
+  .form table .input_field{
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    text-indent: 4px;
+    color: gray;
+  }
+  
+  .form table input:focus{
+    outline: none;
+  }
+  
+  .form table th{
+    font-size: 30px;
+    padding: 5%;
+    margin-bottom: 10px;
+  }
+  
+  .form table tr label{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .form input[type="submit"]{
+    background: linear-gradient(30deg, rgba(33, 98, 136, 0.3) 50%, rgba(113, 52, 170, 0.4) 100%);
+    width: 200px;
+    height: 38px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: 2px 3px 2px rgba(25, 55, 25, 0.6);
+    color: white;
+    transition-property: color, width, height, font-size, box-shadow, padding;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 20px;
+    border-radius: 6px;
+    padding: 5px;
+  }
+  
+  .form input[type="submit"]:hover{
+    color: rgb(238, 130, 180);
+    box-shadow: 8px 10px 8px rgba(25, 55, 25, 0.4);
+    width: 220px;
+    height: 45px;
+    font-size: 22px;
+    padding: 0;
+  }
+
+
+  @media (max-width: 924px) {
+    .form table .input_field{
+      font-size: 14px;
+      width: 150px;
+    }
+    .form input[type="submit"]{
+      width: 150px;
+      height: 27px;
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 2px;
+  
+    }
+  
+    .form input[type="submit"]:hover{
+      box-shadow: 5px 8px 5px rgba(25, 55, 25, 0.4);
+      width: 200px;
+      height: 35px;
+      font-size: 20px;
+      padding: 0;
+    }
+  
+    .form table tr td{
+      padding: 5px;
+      font-size: 16px;
+    }
+  
+    .form table th{
+      font-size: 25px;
+      padding: 5%;
+      margin-bottom: 8px;
+    }
+  
+    .form{
+      width: 350px;
+      margin-top: 20%;
+    }
+  
+    footer h3{
+      font-size: 20px;
+    }
+  
+    footer .about{
+      font-size: 16px;
+      padding-right: 50px;
+    }
+  
+    footer ul{
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 644px) {
+    .form table .input_field{
+      font-size: 14px;
+      width: 120px;
+    }
+  
+    .form{
+      width: 250px;
+      margin-top: 25%;
+    }
+  
+  
+    footer h3{
+      font-size: 18px;
+    }
+  
+    footer .about{
+      font-size: 14px;
+      padding-right: 50px;
+    }
+  
+    footer ul{
+      font-size: 14px;
+    }
+    .nav-bar ul li:nth-child(3){
+      margin-right: 10px;
+    }
+  }
+  
+  
+  @media (min-width: 1266px) {
+    .form table .input_field{
+      font-size: 22px;
+      width: 220px;
+    }
+    .form input[type="submit"]{
+      width: 230px;
+      height: 40px;
+      margin-top: 20px;
+      font-size: 22px;
+      padding: 2px;
+  
+    }
+  
+    .form input[type="submit"]:hover{
+      box-shadow: 5px 8px 5px rgba(25, 55, 25, 0.4);
+      width: 260px;
+      height: 50px;
+      font-size: 24px;
+      padding: 0;
+    }
+  
+    .form table tr td{
+      padding: 5px;
+      font-size: 20px;
+    }
+  
+    .form table th{
+      font-size: 35px;
+      padding: 5%;
+      margin-bottom: 8px;
+    }
+  
+    .form{
+      margin-top: 4%;
+      width: 450px;
+    }
+  
+  }
+.user-data{
+  color: white;
+}
