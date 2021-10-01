@@ -6,11 +6,30 @@
 
 body{
   overflow-x: hidden;
-    background-image: url("./bg3.jpg");
-    background-size: fill;
-    background-repeat: no-repeat;
-    width: 100%;
-    margin-top: 20px;
+  /* background-image: url("./bg3.jpg"); */
+  background-color: rgb(204, 181, 139);
+  background-size: fill;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-top: 20px;
+}
+
+body::-webkit-scrollbar{
+  width: 15px;
+  background: rgb(204, 181, 139);
+}
+
+body.up::-webkit-scrollbar-thumb{
+  background: linear-gradient(0, transparent, green);
+  border-radius: 15px;
+  transition: background-color 100ms ease-in;
+  border-width: 2px;
+  border-color: white;
+}
+body.down::-webkit-scrollbar-thumb{
+  background: linear-gradient(0, green, transparent);
+  transition: background-color 100ms ease-in;
+  border-radius: 15px;
 }
 
 .nav-bar ul{

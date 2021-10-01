@@ -13,8 +13,6 @@
     $query = "SELECT * FROM users WHERE mail LIKE '$email' && passwd LIKE '$pass5'";
     $result = mysqli_query($con, $query) or die("error: $query");
     $data = mysqli_fetch_array($result);
-    echo $pass5;
-    echo $email;
     if ($data[4] === $pass5 && $data[2]= $email){
         $_SESSION["auth"] = TRUE;
         $_SESSION['user_id'] = $data[0];

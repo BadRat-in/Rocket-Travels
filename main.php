@@ -18,12 +18,15 @@
     <title>Rocket Travels</title>
 </head>
 
-<body>
+<body id="body" class="down">
     <nav class="nav-bar">
         <ul>
             <a href="./backend/logout.php">
                 <li class="btn">Logout</li>
             </a>
+            <a>
+            <li>Welcome <?php echo $_SESSION['user_name'];?></li>
+          </a>
             <a href="#">
                 <li class="stitle">Rocket Travels</li>
             </a>
@@ -32,23 +35,85 @@
             </a>
         </ul>
     </nav>
-    <center>
+    <center >
         <div class="search-container">
             <div class="search-box">
-                <input class="search-input" type="search" name="s-from" placeholder="From">
+            <input class="search-input" type="search" id="city_from" name="s-from" placeholder="From" onkeypress="showHint1(this.value)">
                 <i class="fas fa-exchange-alt"></i>
-                <input class="search-input" type="search" name="s-to" placeholder="To"><br>
+                <input class="search-input" type="search" id="city_to" name="s-to" placeholder="To" onkeypress="showHint2(this.value)"><br>
                 <button class="search-btn">Search</button>
             </div>
+            <div id="city_list">
+            </div>
         </div>
-        <h3 class="user-data">Auth &nbsp;<?php echo $_SESSION['auth'];?></h3><br>
-        <h3 class="user-data">User Id &nbsp;<?php echo $_SESSION['user_id'];?></h3><br>
-        <h3 class="user-data">Name &nbsp;<?php echo $_SESSION['user_name'];?></h3><br>
-        <h3 class="user-data">Mail &nbsp;<?php echo $_SESSION['email'];?></h3><br>
-        <h3 class="user-data">Number &nbsp;<?php echo $_SESSION['number'];?></h3><br>
-        <h3 class="user-data">Password &nbsp;<?php echo $_SESSION['pass'];?></h3><br>
-        <h3 class="user-data">Table &nbsp;<?php echo $_SESSION['table_name'];?></h3><br>
     </center>
 </body>
+<script>
+function showHint1(str) {
+  if (str.length == 0) {
+    document.getElementById("").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          var data = this.responseText;
+          var data_arr = JSON.parse(data);
+          var html_data = ""; 
+          data_arr.forEach((city, index, array) => {
+            html_data += "<h4 onclick='go_from(this.id)' id='"+index+"' style='cursor: pointer;'>"+city+"</h4>";
+          })
+          document.getElementById("city_list").innerHTML = html_data;
+      }
+    };
+    xmlhttp.open("GET", "./backend/city_list.php?q=" + str, true);
+    xmlhttp.send();
+}
+}
+
+function go_from(str){
+    var city_name = "";
+    city_name = document.getElementById(str).innerHTML;
+    console.log(city_name);
+    document.getElementsByName("s_from").innerHTML = city_name;
+}
+
+
+function showHint2(str) {
+  if (str.length == 0) {
+    document.getElementById("").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          var data = this.responseText;
+          var data_arr = JSON.parse(data);
+          var html_data = ""; 
+          data_arr.forEach((value, index, array) => {
+            html_data += "<h4 onclick='go_to(this.id)' id='"+index+"' style='cursor: pointer;'>"+value+"</h4>";
+          })
+          document.getElementById("city_list").innerHTML = html_data;
+      }
+    };
+    xmlhttp.open("GET", "./backend/city_list.php?q=" + str, true);
+    xmlhttp.send();
+  }
+}
+function go_to(str){
+    var city_name = document.getElementById(str).innerHTML;
+    document.getElementById("city_to").innerHTML = city_name;
+}
+
+var scrollPos = 0;
+// adding scroll event
+window.addEventListener('scroll', function(){
+  if ((document.body.getBoundingClientRect()).top > scrollPos)
+    document.getElementById("body").className = "up";
+  else
+    document.getElementById('body').className = "down";
+    scrollPos = (document.body.getBoundingClientRect()).top;
+});
+</script>
 
 </html>
