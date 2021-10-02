@@ -20,9 +20,6 @@
 
 <body id="body" class="down">
 
-    <!-- <div>
-        
-    </div> -->
     <nav class="nav-bar">
         <ul>
             <a href="./signup.php?error=0">
@@ -42,9 +39,9 @@
     <center >
         <div class="search-container">
             <div class="search-box">
-            <input class="search-input" type="search" id="city_from" name="s-from" placeholder="From" onkeypress="showHint1(this.value)">
-                <i class="fas fa-exchange-alt"></i>
-                <input class="search-input" type="search" id="city_to" name="s-to" placeholder="To" onkeypress="showHint2(this.value)"><br>
+            <input class="search-input" type="search" id="city_from" name="s-from" placeholder="From" onkeyup="showHint1(this.value)" onkeydown="showHint1(this.value)">
+                <i class="fas fa-exchange-alt" onclick="swapvalue()"></i>
+                <input class="search-input" type="search" id="city_to" name="s-to" placeholder="To" onkeyup="showHint2(this.value)" onkeydown="showHint2(this.value)"><br>
                 <button class="search-btn">Search</button>
             </div>
             <div id="city_list">
@@ -53,61 +50,68 @@
     </center>
 </body>
 <script>
-function showHint1(str) {
-  if (str.length == 0) {
-    document.getElementById("").innerHTML = "";
-    return;
-  } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+ function showHint1(str) {
+    if (str.length == 0) {
+      document.getElementById("").innerHTML = "";
+      return;
+    } else {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
           var data = this.responseText;
           var data_arr = JSON.parse(data);
-          var html_data = ""; 
+          var html_data = "";
           data_arr.forEach((city, index, array) => {
-            html_data += "<h4 onclick='go_from(this.id)' id='"+index+"' style='cursor: pointer;'>"+city+"</h4>";
+            html_data += "<h4 class='csc' onclick='go_from(this.id)' id='" + index + "' style='cursor: pointer;'>" + city + "</h4>";
           })
           document.getElementById("city_list").innerHTML = html_data;
-      }
-    };
-    xmlhttp.open("GET", "./backend/city_list.php?q=" + str, true);
-    xmlhttp.send();
-}
-}
+        }
+      };
+      xmlhttp.open("GET", "./backend/city_list.php?q=" + str, true);
+      xmlhttp.send();
+    }
+  }
 
-function go_from(str){
-    var city_name = "";
+  function go_from(str) {
+    window.scrollTo({
+      top: 10,
+      behavior: 'smooth'
+    });
     city_name = document.getElementById(str).innerHTML;
-    console.log(city_name);
-    document.getElementById("city_from").innerHTML = city_name;
-}
+    document.getElementById("city_from").value = city_name;
+  }
 
 
-function showHint2(str) {
-  if (str.length == 0) {
-    document.getElementById("").innerHTML = "";
-    return;
-  } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+  function showHint2(str) {
+    if (str.length == 0) {
+      document.getElementById("").innerHTML = "";
+      return;
+    } else {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
           var data = this.responseText;
           var data_arr = JSON.parse(data);
-          var html_data = ""; 
+          var html_data = "";
           data_arr.forEach((value, index, array) => {
-            html_data += "<h4 onclick='go_to(this.id)' id='"+index+"' style='cursor: pointer;'>"+value+"</h4>";
+            html_data += "<h4 class='csc' onclick='go_to(this.id)' id='" + index + "' style='cursor: pointer;'>" + value + "</h4>";
           })
           document.getElementById("city_list").innerHTML = html_data;
-      }
-    };
-    xmlhttp.open("GET", "./backend/city_list.php?q=" + str, true);
-    xmlhttp.send();
+        }
+      };
+      xmlhttp.open("GET", "./backend/city_list.php?q=" + str, true);
+      xmlhttp.send();
+    }
   }
-}
-function go_to(str){
+
+  function go_to(str) {
+    window.scrollTo({
+      top: 10,
+      behavior: 'smooth'
+    });
     var city_name = document.getElementById(str).innerHTML;
-    document.getElementById("city_to").innerHTML = city_name;
-}
+    document.getElementById("city_to").value = city_name;
+  }
 
 var scrollPos = 0;
 // adding scroll event
@@ -118,5 +122,11 @@ window.addEventListener('scroll', function(){
     document.getElementById('body').className = "down";
     scrollPos = (document.body.getBoundingClientRect()).top;
 });
+
+function swapvalue(){
+    var strvalue = document.getElementById("city_from").value;
+    document.getElementById("city_from").value = document.getElementById("city_to").value;
+    document.getElementById("city_to"). value = strvalue;
+  }
 </script>
 </html>
