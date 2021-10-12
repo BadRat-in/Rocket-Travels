@@ -2,7 +2,7 @@
 
 ## 👋 Hi, I’m Ravindra Singh Budgurjar
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/bad___rat_404?color=1DA1F2&logo=twitter&style=for-the-badge)]//(https://twitter.com/intent/follow?screen_name=bad___rat_404)
+[![Twitter Follow](https://img.shields.io/twitter/follow/bad___rat_404?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=bad___rat_404)
 
 ## I'm a Student,Developer,Pentester!!
 - 👨‍🎓 I'm currently working in a VS Code and learning everytthing
