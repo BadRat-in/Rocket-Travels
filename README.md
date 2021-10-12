@@ -2,7 +2,7 @@
 
 ## 👋 Hi, I’m Ravindra Singh Budgurjar
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/bad___rat_404?color=1DA1F2&logo=twitter&style=for-the-badge)]
+[![Twitter Follow](https://img.shields.io/twitter/follow/bad___rat_404?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=bad___rat_404)
 
 ## I'm a Student,Developer,Pentester!!
 - 👨‍🎓 I'm currently working in a VS Code and learning everytthing
@@ -22,13 +22,12 @@
 <img align="left" alt="Visual Studio Code" width="40px" src="./README/visual-studio-code.png" />
 <img align="left" alt="HTML5" width="40px" src="./README/html5.png" />
 <img align="left" alt="CSS3" width="40px" src="./README/css.png" />
-<img align="left" alt="C Programming" width="40px" src="./README/c-programming.png" />
-<img align="left" alt="C++" width="40px" src="./README/C++.png" />
 <img align="left" alt="MySQL" width="40px" src="./README/sql.png" />
-<img align="left" alt="MongoDB" width="40px" src="./README/mongodb.png" />
 <img align="left" alt="Git" width="40px" src="./README/git.png" />
 <img align="left" alt="GitHub" width="40px" src="./README/github.png" />
-<img align="left" alt="Terminal" width="40px" src="./README/terminal.png" />
+<img align="left" alt="DJango" width="40px" src="./README/dj.png" />
+<img align="left" alt="JavaScript" width="40px" src="./README/js.png" />
+<img align="left" alt="Python" width="40px" src="./README/python.jpg" />
 <br />
 
 
