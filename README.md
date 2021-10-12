@@ -8,35 +8,29 @@
 - 🌱 I’m currently learning in University Institute of Technology, RGPV Bhopal INDIA.
 - 💞️ I’m looking to collaborate with other open source projects
 - ⚡ Fun fact: I love to draw, play guitar and support dad at the Hardware shop
-<!-- - 👀 I’m interested in programming language,Web and app development, Cyber Security,Database-management-system,Data Science,Dark Web, Cryptography 
-- 🌱 I’m currently learning in University Institute of Technology, RGPV Bhopal INDIA. 
-- 💞️ I’m looking to collaborate on Cyber Security,Bug bounty,web and app development 
-- 📫 How to reach me \\My Email is vaibhavgupta942466@gmail.com 
-                     \\My Insta link is https://www.instagram.com/vg._nucleus/?utm_medium=copy_link
-                     \\My Linkedin Profile https://www.linkedin.com/in/vaibhav-gupta-337120193/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B7dsW%2FXq8Q46ty4B2urJ%2FMQ%3D%3D -->
 ## Connect with me:
 
-[<img align="left" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/gmail.png" alt="" width="40px" />][gmail]
-[<img align="left" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/link.png" alt="" width="40px" />][linkedin]
-[<img align="left" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/twitter.png" width ="40px"/>][twitter]
-[<img align="left" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/instagram.png" alt="" width="40px" />][instagram]
+[<img align="left" src="./README/gmail.png" alt="" width="40px" />][gmail]
+[<img align="left" src="./README/link.png" alt="" width="40px" />][linkedin]
+[<img align="left" src="./README/twitter.png" width ="40px"/>][twitter]
+[<img align="left" src="./README/instagram.png" alt="" width="40px" />][instagram]
 <br />
 
 ## Languages and Tools:
-<img align="left" alt="Visual Studio Code" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/visual-studio-code.png" />
-<img align="left" alt="HTML5" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/html5.png" />
-<img align="left" alt="CSS3" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/css.png" />
-<img align="left" alt="C Programming" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/c-programming.png" />
-<img align="left" alt="C++" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/C++.png" />
-<img align="left" alt="MySQL" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/sql.png" />
-<img align="left" alt="MongoDB" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/mongodb.png" />
-<img align="left" alt="Git" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/git.png" />
-<img align="left" alt="GitHub" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/github.png" />
-<img align="left" alt="Terminal" width="40px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/terminal.png" />
+<img align="left" alt="Visual Studio Code" width="40px" src="./README/visual-studio-code.png" />
+<img align="left" alt="HTML5" width="40px" src="./README/html5.png" />
+<img align="left" alt="CSS3" width="40px" src="./README/css.png" />
+<img align="left" alt="C Programming" width="40px" src="./README/c-programming.png" />
+<img align="left" alt="C++" width="40px" src="./README/C++.png" />
+<img align="left" alt="MySQL" width="40px" src="./README/sql.png" />
+<img align="left" alt="MongoDB" width="40px" src="./README/mongodb.png" />
+<img align="left" alt="Git" width="40px" src="h./README/git.png" />
+<img align="left" alt="GitHub" width="40px" src="./README/github.png" />
+<img align="left" alt="Terminal" width="40px" src="./README/terminal.png" />
 <br />
 
-## Self Made Game:
-[<img align="left" alt="Terminal" width="50px" src="https://github.com/BadRat-in/vaibhavgupta942466/tree/main/READme/Images/match_4.png" />][match4game]
+## Travel System:
+[<img align="left" alt="Terminal" width="50px" src="./README/match_4.png" />][match4game]
 
 <!---
 vaibhavgupta942466/vaibhavgupta942466 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
