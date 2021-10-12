@@ -29,13 +29,7 @@
 <img align="left" alt="Terminal" width="40px" src="./README/terminal.png" />
 <br />
 
-## Travel System:
-[<img align="left" alt="Terminal" width="50px" src="./README/start-png-44891.png" />][match4game]
 
-<!---
-vaibhavgupta942466/vaibhavgupta942466 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
 <br />
 <br />
 
@@ -43,4 +37,3 @@ You can click the Preview link to take a look at your changes.
 [instagram]: https://www.instagram.com/bad___rat/
 [gmail]: mailto:unknowntester404@protonmail.com
 [twitter]: https://twitter.com/bad___rat_404
-[match4game]: https://github.com/BadRat-in/Rocket-Travels/home.php
