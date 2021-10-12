@@ -24,7 +24,7 @@
 <img align="left" alt="C++" width="40px" src="./README/C++.png" />
 <img align="left" alt="MySQL" width="40px" src="./README/sql.png" />
 <img align="left" alt="MongoDB" width="40px" src="./README/mongodb.png" />
-<img align="left" alt="Git" width="40px" src="h./README/git.png" />
+<img align="left" alt="Git" width="40px" src="./README/git.png" />
 <img align="left" alt="GitHub" width="40px" src="./README/github.png" />
 <img align="left" alt="Terminal" width="40px" src="./README/terminal.png" />
 <br />
