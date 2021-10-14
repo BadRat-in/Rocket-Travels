@@ -25,7 +25,7 @@
 <img align="left" alt="MySQL" width="40px" src="./README/sql.png" />
 <img align="left" alt="Git" width="40px" src="./README/git.png" />
 <img align="left" alt="GitHub" width="40px" src="./README/github.png" />
-<img align="left" alt="JQuery" width="40px" src="./README/jquery-logo-png--800.gif" />
+<img align="left" alt="JQuery" width="40px" background="white" src="./README/jquery-logo-png--800.gif" />
 <img align="left" vertical-aline="center" alt="PHP" width="40px" height="40px" src="./README/PHP_logo.png" />
 <img align="left" alt="JavaScript" width="40px" src="./README/js.png" />
 <br />
