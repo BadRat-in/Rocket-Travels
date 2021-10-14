@@ -25,9 +25,8 @@
 <img align="left" alt="MySQL" width="40px" src="./README/sql.png" />
 <img align="left" alt="Git" width="40px" src="./README/git.png" />
 <img align="left" alt="GitHub" width="40px" src="./README/github.png" />
-<img align="left" alt="DJango" width="40px" src="./README/dj.png" />
+<img align="left" alt="DJango" width="40px" src="./README/php_logo.png" />
 <img align="left" alt="JavaScript" width="40px" src="./README/js.png" />
-<img align="left" alt="Python" width="40px" src="./README/python.jpg" />
 <br />
 
 
