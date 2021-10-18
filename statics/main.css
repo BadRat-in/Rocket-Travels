@@ -250,7 +250,7 @@ section#welcome-text p {
 
 .slide_ p {
     cursor: pointer;
-    transition: all 700ms ease-in-out;
+    transition: all 300ms ease-in-out;
     position: relative;
     z-index: auto;
 }

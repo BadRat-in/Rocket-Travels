@@ -123,6 +123,10 @@ a {
     width: 74%;
 }
 
+.nav ul li:nth-child(5) a::before {
+    background-color: transparent;
+}
+
 .nav ul li {
     display: inline-block;
 }
@@ -445,6 +449,20 @@ label {
     box-shadow: 1px 1px 4px 4px;
     padding: 0 0 15px 0;
     color: rgba(53, 53, 52, 0.562);
+    animation: slidetile 250ms ease-in;
+    position: relative;
+}
+
+@keyframes slidetile {
+    0% {
+        left: -800px;
+    }
+    50% {
+        left: -400px;
+    }
+    100% {
+        left: 0px;
+    }
 }
 
 .bus-name-time {
