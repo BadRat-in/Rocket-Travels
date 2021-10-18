@@ -14,22 +14,6 @@
     $query = "SELECT * FROM users WHERE mail LIKE '$email' && passwd LIKE '$pass5'";
     $result = mysqli_query($con, $query) or die("error: $query");
     $data = mysqli_fetch_array($result);
-    if ($_GET['b_name'] == ""){
-        echo "1";
-        echo "Empty";
-    }
-    if ($_GET['b_name'] == null){
-        echo "2";
-        echo null;
-    }
-    if ($_GET['b_name'] != null){
-        echo "3";
-        echo $_GET['b_name'];
-    }
-    if ($_GET['b_name'] != ""){
-        echo "4";
-        echo $_GET['b_name'];
-    }
     if ($data[4] === $pass5 && $data[2]= $email){
         $_SESSION["auth"] = TRUE;
         $_SESSION['user_id'] = $data[0];
@@ -40,7 +24,7 @@
         $_SESSION['table_name'] = $data[5];
         
         if ($_GET['b_name'] != null || $_GET['b_name'] != ""){
-            header("location: ../b_booking.php?b_name=".$_GET['b_name']."&b_num=".$_GET["b_num"]."&b_class=".$_GET['b_class']."&b_day=".$_GET['b_day']);
+            header("location: ../b_booking.php?b_name=".$_GET['b_name']."&b_num=".$_GET["b_num"]."&b_class=".$_GET['b_class']."&b_day=".$_GET['b_day']."&city_from=".$_GET['city_from']."&city_to=".$_GET['city_to']);
         }else{
             header("location: ../main.php");
         }
