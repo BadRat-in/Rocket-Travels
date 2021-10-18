@@ -100,8 +100,10 @@ if (isset($_SESSION["auth"])) {
     row_data[7] = row_data[7].split("<");
     var bus_num = row_data[4].split(")");
     bus_num = bus_num[0].split("(");
+    var city_from = document.getElementById("city_from").value;
+    var city_to = document.getElementById("city_to").value;
 
-    window.location.assign("./signin.php?b_name=" + row_data[2][0] + "&b_num=" + bus_num[1] + "&b_class=" + bus_Class[0] + "&b_day=" + row_data[7][0] + "&error=0&user=");
+    window.location.assign("./signin.php?b_name=" + row_data[2][0] + "&b_num=" + bus_num[1] + "&b_class=" + bus_Class[0] + "&b_day=" + row_data[7][0] + "&city_from="+ city_from + "&city_to=" + city_to + "&error=0&user=");
   }
 
 
@@ -111,7 +113,7 @@ if (isset($_SESSION["auth"])) {
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           alpha = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-          day = ["Today", "Yesterday"];
+          day = ["Today", "Tomorrow"];
           var data = this.responseText;
           var data_arr = JSON.parse(data);
           var html_data = "";

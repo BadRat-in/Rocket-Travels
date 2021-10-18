@@ -25,8 +25,9 @@ if (isset($_SESSION["auth"])) {
         <div class="form">
             <form method="POST" 
             action='<?php if (isset($_GET['b_name'])) {
-                                            $b_name = $_GET['b_name']; $b_num = $_GET["b_num"]; $b_class = $_GET["b_class"]; $b_day = $_GET["b_day"];
-                                            echo "./backend/login_be.php?b_name=$b_name&b_num=$b_num&b_class=$b_class&b_day=$b_day";
+                                            $b_name = $_GET['b_name']; $b_num = $_GET["b_num"]; $b_class = $_GET["b_class"]; $b_day = $_GET["b_day"]; $city_from =
+                                            $_GET["city_from"]; $city_to = $_GET["city_to"];
+                                            echo "./backend/login_be.php?b_name=$b_name&b_num=$b_num&b_class=$b_class&b_day=$b_day&city_from=$city_from&city_to=$city_to";
                                         } else {
                                             echo "./backend/login_be.php?b_name=";
                                         } ?>'>

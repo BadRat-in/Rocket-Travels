@@ -134,13 +134,13 @@ session_start();
 <script>
     function showimage(str) {
         str = str.split("_");
-        document.getElementById(str[1]).style = "color: white\; font-size: 30px\; animation: changePlace 300ms ease-in-out\; top: -90px";
+        document.getElementById(str[1]).style = "color: white\; font-size: 30px\; animation: changePlace 600ms ease-in-out\; top: -90px";
     }
 
     function hideimage(str) {
         str = str.split("_")
         console.log(str);
-        document.getElementById(str[1]).style = "color: black\; font-size: normel\; animation: changePlace2 300ms ease-in-out;";
+        document.getElementById(str[1]).style = "color: black\; font-size: normel\; animation: changePlace2 600ms ease-in-out;";
     }
 </script>
 

@@ -63,13 +63,9 @@ if (!isset($_SESSION['auth'])) {
   <center>
     <div class="search-container">
       <div class="search-box">
-        <input class="search-input" type="search" id="city_from" name="s-from" <?php if (isset($_SESSION['s_city'])) {
-                                                                                  echo 'value="' . $_SESSION['s_city'] . '"';
-                                                                                } ?> placeholder="From" onkeyup="showHint1(this.value)" onkeydown="showHint1(this.value)">
+        <input class="search-input" type="search" id="city_from" name="s-from" <?php if (isset($_SESSION['s_city'])) {echo 'value="' . $_SESSION['s_city'] . '"'; } ?> placeholder="From" onkeyup="showHint1(this.value)" onkeydown="showHint1(this.value)">
         <i class="fas fa-exchange-alt" onclick="swapvalue()"></i>
-        <input class="search-input" type="search" id="city_to" name="s-to" <?php if (isset($_SESSION['e_city'])) {
-                                                                              echo 'value="' . $_SESSION['e_city'] . '"';
-                                                                            } ?> placeholder="To" onkeyup="showHint2(this.value)" onkeydown="showHint1(this.value)"><br>
+        <input class="search-input" type="search" id="city_to" name="s-to" <?php if (isset($_SESSION['e_city'])) {echo 'value="' . $_SESSION['e_city'] . '"';} ?> placeholder="To" onkeyup="showHint2(this.value)" onkeydown="showHint1(this.value)"><br>
         <button class="search-btn" onclick="getbus()">Search</button>
       </div>
       <div id="city_list">
@@ -121,8 +117,10 @@ if (!isset($_SESSION['auth'])) {
     row_data[7] = row_data[7].split("<");
     var bus_num = row_data[4].split(")");
     bus_num = bus_num[0].split("(");
+    var city_from = document.getElementById("city_from").value;
+    var city_to = document.getElementById("city_to").value;
 
-    window.location.assign("./b_booking.php?b_name=" + row_data[2][0] + "&b_num=" + bus_num[1] + "&b_class=" + bus_Class[0] + "&b_day=" + row_data[7][0] + "&error=0&user=");
+    window.location.assign("./b_booking.php?b_name=" + row_data[2][0] + "&b_num=" + bus_num[1] + "&b_class=" + bus_Class[0] + "&b_day=" + row_data[7][0] + "&city_from="+ city_from + "&city_to=" + city_to + "&error=0&user=");
   }
 
   function getbus() {
@@ -131,14 +129,16 @@ if (!isset($_SESSION['auth'])) {
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           alpha = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-          day = ["Today", "Yesterday"];
+          var today = new Date();
+          af_tm = today.getFullYear().toString()+"-"+(today.getMonth()+1).toString()+"-"+(today.getDate()+2).toString();
+          day = ["Today", "Tomorrow", af_tm];
           var data = this.responseText;
           var data_arr = JSON.parse(data);
           var html_data = "";
           data_arr.forEach((value, index, array) => {
             var bus_numbers = "MP" + String(Math.floor((Math.random() * 50) + 04)) + "-" + alpha[Math.floor((Math.random() * 25))] + alpha[Math.floor((Math.random() * 25))] + "-" + String(Math.floor((Math.random() * 9999) + 1000));
             var rand = Math.floor((Math.random() * data_arr.length));
-            html_data += "<div class='bus-tile'><div class='bus-name-time' id='" + index + "'><div class='bus-name'><h3>" + data_arr[rand][1] + "</h3><h5>&nbsp;(" + bus_numbers + ")</h5></div><h4>" + day[Math.floor((Math.random() * 2))] + "</h4></div><div class='fair-div'><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_e'><p>Economy Class</p></div><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_s'><p>Sleeper Class</p></div><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_sa'><p>Second AC Class</p></div><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_fa'><p>First AC Class</p></div></div></div><br>";
+            html_data += "<div class='bus-tile'><div class='bus-name-time' id='" + index + "'><div class='bus-name'><h3>" + data_arr[rand][1] + "</h3><h5>&nbsp;(" + bus_numbers + ")</h5></div><h4>" + day[Math.floor((Math.random() * 3))] + "</h4></div><div class='fair-div'><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_e'><p>Economy Class</p></div><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_s'><p>Sleeper Class</p></div><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_sa'><p>Second AC Class</p></div><div class='fair' onclick='sendBusData(this.id)' id='" + index + "_fa'><p>First AC Class</p></div></div></div><br>";
           });
           document.getElementById("city_list").innerHTML = html_data;
         }
@@ -200,6 +200,11 @@ if (!isset($_SESSION['auth'])) {
     var strvalue = document.getElementById("city_from").value;
     document.getElementById("city_from").value = document.getElementById("city_to").value;
     document.getElementById("city_to").value = strvalue;
+    var today = Date();
+    console.log(today.getMinute);
+    console.log(today.getYear);
+    console.log(today.getYears);
+    console.log(today.getDate());
   }
 </script>
 
